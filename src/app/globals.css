@@ -223,9 +223,15 @@ a {
   padding: 30px 26px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
   position: sticky;
   top: 120px;
+}
+
+.sidebar-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 1;
 }
 
 .sidebar-title {
@@ -287,6 +293,7 @@ a {
 }
 
 .theme-toggle {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;

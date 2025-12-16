@@ -24,19 +24,21 @@ const navItems: { key: SidebarKey; label: string; href: string }[] = [
 export default function Sidebar({ active }: SidebarProps) {
   return (
     <aside className="sidebar-card">
-      <div className="sidebar-title">Dashboard</div>
-      <nav className="nav-list">
-        {navItems.map((item) => (
-          <Link key={item.key} href={item.href}>
-            <div
-              className={`nav-item ${active === item.key ? "active" : ""}`}
-              aria-current={active === item.key ? "page" : undefined}
-            >
-              <span>{item.label}</span>
-            </div>
-          </Link>
-        ))}
-      </nav>
+      <div className="sidebar-main">
+        <div className="sidebar-title">Dashboard</div>
+        <nav className="nav-list">
+          {navItems.map((item) => (
+            <Link key={item.key} href={item.href}>
+              <div
+                className={`nav-item ${active === item.key ? "active" : ""}`}
+                aria-current={active === item.key ? "page" : undefined}
+              >
+                <span>{item.label}</span>
+              </div>
+            </Link>
+          ))}
+        </nav>
+      </div>
 
       <div className="upgrade-card">
         <div>Upgrade to make as many videos as you like.</div>
