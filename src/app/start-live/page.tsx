@@ -17,8 +17,8 @@ const sessions = [
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Basic Life Safety Support - 02",
-    instructor: "Arafa",
+    title: "Basic Life Safety Support - 03",
+    instructor: "Arun",
     status: "Live not started",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
@@ -31,8 +31,8 @@ const sessions = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Basic Life Safety Support - 02",
-    instructor: "Arafa",
+    title: "Basic Life Safety Support - 04",
+    instructor: "Sujan",
     status: "Live not started",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",

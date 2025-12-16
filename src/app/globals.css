@@ -200,7 +200,7 @@ a {
 
 .doctor-photo {
   width: 750px;
-  height: 935px;
+  height: 617px;
   border-radius: 22px;
   object-fit: cover;
   box-shadow: var(--shadow);
@@ -372,7 +372,7 @@ a {
 }
 
 .hero-card {
-  width: 95%;
+  width: 100%;
   min-height: 360px;
   background: linear-gradient(135deg, #f7faff, #e0f2fe);
   border-radius: 32px;
@@ -414,6 +414,10 @@ a {
   display: flex;
   gap: 12px;
   margin-top: 8px;
+}
+
+.hero-actions button {
+  min-width: 180px;
 }
 
 .secondary-btn {
@@ -542,16 +546,16 @@ a {
 
 .live-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
 }
 
 .live-card {
-  width: 425px;
-  height: 270px;
-  border-radius: 40px;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 28px;
+  overflow: hidden;
   background: #0f172a;
   color: #fff;
   box-shadow: var(--shadow);
@@ -562,36 +566,27 @@ a {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: blur(3px);
+  filter: blur(4px);
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-.live-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6));
-}
-
 .live-card .content {
-  position: absolute;
-  bottom: 18px;
-  left: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0f172a;
-  border-radius: 35px;
-  padding: 16px 18px;
-  width: 405px;
-  height: 129px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  margin: 120px 12px 12px;
+  border-radius: 22px;
 }
 
 .live-card h4 {
   font-weight: 800;
+  font-size: 16px;
 }
 
 .live-card p {
@@ -601,9 +596,9 @@ a {
 }
 
 .create-card {
-  width: 425px;
-  height: 270px;
-  border-radius: 40px;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 28px;
   border: 2px dashed #d1d5db;
   background: var(--card);
   display: grid;
@@ -614,8 +609,8 @@ a {
 }
 
 .create-form-card {
-  width: 925px;
-  height: 798px;
+  width: 640px;
+  height: 580px;
   border-radius: 50px;
   border: 1px solid var(--border);
   background: var(--card);
@@ -625,6 +620,28 @@ a {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.create-live-backdrop {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(2.5px);
+  background: rgba(15, 23, 42, 0.16);
+  z-index: 30;
+}
+
+.create-live-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.create-live-modal .create-form-card {
+  pointer-events: auto;
 }
 
 .two-column-grid {
