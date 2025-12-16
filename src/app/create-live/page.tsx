@@ -2,9 +2,7 @@ import DashboardShell from "@/components/DashboardShell";
 
 export default function CreateLivePage() {
   return (
-    <>
-      <DashboardShell active="start-live" />
-
+    <DashboardShell active="start-live">
       <div className="create-live-backdrop" />
 
       <div className="create-live-modal">
@@ -68,7 +66,7 @@ export default function CreateLivePage() {
           </div>
         </div>
       </div>
-    </>
+    </DashboardShell>
   );
 }
 
