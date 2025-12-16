@@ -1,22 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function RegisterPage() {
   return (
     <div className="page-shell">
       <div className="auth-layout">
         <section className="auth-card">
           <div>
-            <h1 className="auth-heading">Welcome Back</h1>
+            <h1 className="auth-heading">Register Your Account</h1>
             <p className="auth-subtext">
-              Enter your credentials to login your account
+              Enter your credentials to register your account
             </p>
           </div>
 
           <div className="form-field">
-            <label htmlFor="email">Email address</label>
+            <label htmlFor="fullName">Full Name</label>
             <input
-              id="email"
+              id="fullName"
+              type="text"
+              placeholder="Manamadhan"
+              className="text-input"
+              defaultValue="Manamadhan"
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="regEmail">Email address</label>
+            <input
+              id="regEmail"
               type="email"
               placeholder="manmadhanaros@gmail.com"
               className="text-input"
@@ -25,42 +36,32 @@ export default function Home() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="phone">Mobile Number</label>
             <input
-              id="password"
-              type="password"
-              placeholder="••••••••••"
+              id="phone"
+              type="tel"
+              placeholder="+91 97913 36435"
               className="text-input"
-              defaultValue="password123"
+              defaultValue="+91 97913 36435"
             />
-          </div>
-
-          <div className="actions-row">
-            <label className="checkbox-row">
-              <input type="checkbox" defaultChecked />
-              Remember me
-            </label>
-            <Link className="muted-link" href="#">
-              Forgot password?
-            </Link>
           </div>
 
           <Link href="/dashboard">
             <button className="primary-btn" type="button">
-              Login
+              Register Now
             </button>
           </Link>
 
           <div className="register-strip">
-            Don&apos;t have an account?{" "}
-            <Link className="muted-link" href="/register">
-              Register
+            Already have an account?{" "}
+            <Link className="muted-link" href="/">
+              Login
             </Link>
           </div>
         </section>
 
         <Image
-          src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=80"
+          src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=1200&q=80"
           alt="Doctor portrait"
           width={750}
           height={935}
@@ -71,3 +72,4 @@ export default function Home() {
     </div>
   );
 }
+
