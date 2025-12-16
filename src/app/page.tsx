@@ -1,7 +1,12 @@
+ "use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="page-shell">
       <div className="auth-layout">
@@ -26,13 +31,23 @@ export default function Home() {
 
           <div className="form-field">
             <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="••••••••••"
-              className="text-input"
-              defaultValue="password123"
-            />
+            <div className="password-wrapper">
+              <input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="••••••••••"
+                className="text-input password-input"
+                defaultValue="password123"
+              />
+              <button
+                type="button"
+                className="eye-toggle"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+                onClick={() => setShowPassword((v) => !v)}
+              >
+                👁
+              </button>
+            </div>
           </div>
 
           <div className="actions-row">

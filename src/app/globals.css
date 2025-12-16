@@ -119,6 +119,43 @@ a {
   color: var(--text);
 }
 
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input {
+  padding-right: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.eye-toggle:hover {
+  color: var(--text);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .text-input {
   height: 54px;
   border: 1px solid var(--border);
@@ -584,6 +621,35 @@ a {
   border-radius: 22px;
 }
 
+.live-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.live-chip {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+.live-chip.danger {
+  color: #b91c1c;
+  border-color: #fecdd3;
+}
+
+.live-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text-input.compact {
+  height: 42px;
+  font-size: 14px;
+}
+
 .live-card h4 {
   font-weight: 800;
   font-size: 16px;
@@ -660,4 +726,14 @@ a {
   place-items: center;
   color: var(--muted);
   font-weight: 600;
+}
+
+.upload-box.interactive {
+  cursor: pointer;
+  transition: border 0.2s ease, color 0.2s ease;
+}
+
+.upload-box.interactive:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
